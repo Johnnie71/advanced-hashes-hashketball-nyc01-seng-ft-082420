@@ -192,5 +192,6 @@ end
 def big_shoe_rebounds
   rebounds = 0 
   big_shoe = 0 
-  game_hash.each do 
+  game_hash.each do |home_away, team_info|
+    
 end
