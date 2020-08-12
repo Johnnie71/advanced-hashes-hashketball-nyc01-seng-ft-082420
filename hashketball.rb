@@ -177,16 +177,20 @@ def team_names
   teams
 end
 
-def player_numbers(team_name)
-  jersey_numbers = []
-  game_hash.each do |home_away, team_info|
-    team_info.each do |stats|
-      if stats[:player_name] == team_name
-        jersey_numbers = stats[:number]
+def player_numbers(input)
+  output = []
+  game_hash.each do |team, team_info|
+    if team_info[:team_name] == input 
+      team_info.each do |key, value|
+        if key == :players
+          value.each do |player|
+          output.push(player[:number])
+          end
+        end
       end
     end
   end
-  return jersey_numbers.sort
+  return output
 end
 
 
