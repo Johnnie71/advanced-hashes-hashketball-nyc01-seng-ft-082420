@@ -194,7 +194,7 @@ def player_numbers(input)
 end
 
 def player_stats(input)
-  game_hash.each do |team, team_info|
+  game_hash.each do |home_away, team_info|
     team_info.each do |key, value|
       if key == :players
         value.each do |player|
