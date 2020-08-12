@@ -190,4 +190,7 @@ def player_numbers(team_name)
 end
 
 def big_shoe_rebounds
+  rebounds = 0 
+  big_shoe = 0 
+  game_hash.each do 
 end
